@@ -20,6 +20,13 @@ server:
   tomcat:
     compression: on
     
+zuul:
+  ignoredServices: "*"
+  routes:
+    service:
+      path: /sidecar/**
+      serviceId: sidecar
+    
 #eureka.instance.statusPageUrlPath: /admin/info
 #eureka.instance.healthCheckUrlPath: /admin/health
 eureka:
